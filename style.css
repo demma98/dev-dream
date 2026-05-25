@@ -101,6 +101,11 @@ nav {
     font-style: italic;
 }
 
+.link_ko-fi_footer{
+    text-decoration: none;
+    text-align: right;
+    color: #ff97fa;
+}
 /* --lightmode-- */
 
 @media (prefers-color-scheme: light) {
