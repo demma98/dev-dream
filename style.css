@@ -114,6 +114,10 @@ nav {
     margin-right: 10px;
     color: #ff97fa;
 }
+
+.link_activity{
+    color: #ff97fa;
+}
 /* --lightmode-- */
 
 @media (prefers-color-scheme: light) {

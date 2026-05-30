@@ -1,8 +1,11 @@
+{% assign archive_pages_reverse = site.pages | where_exp: "item", "item.path contains 'archive/'" | sort: "date" | reverse%}
+{% assign latest_page = archive_pages_reverse | first %}
+
 <a class="nav_title" href="{{ '/' | relative_url }}"><h1>dev dream</h1></a>
 
 <nav class="navbar" id="navbar">
   <a class="nav_element" href="{{ '/' | relative_url }}">home</a>
-  <a class="nav_element" href="{{ '/archive/260523.html' | relative_url }}">latest</a>
+  <a class="nav_element" href="{{ latest_page.url | relative_url }}">latest</a>
   <a class="nav_element" href="{{ '/archive' | relative_url }}">archive</a>
   <a class="nav_element" href="{{ '/about' | relative_url }}">about</a>
   <a class="nav_element" href="https://demma98.github.io/">my other web</a>

@@ -8,12 +8,17 @@
 </head>
 <body>
   {% include navbar.html %}
+
+  {% for page_i in archive_pages_reverse limit: 2 %}
   <div class="content">
-    <a class="nav_title" href="{{ '/archive/260523.html' | relative_url }}">
-      <h2>|- - - wanting to make stuff - - -|</h2>
-      <img src="{{ '/assets/blog_images/260523 laptop.jpg' | relative_url }}" alt="the laptop used for writing this blog">
+    <a class="nav_title" href="{{ page_i.url | relative_url }}">
+      <h2>|- - - {{page_i.title}} - - -|</h2>
+      <img src="{{ page_i.thumbnail | relative_url }}" alt="{{page_i.thumbnail_alt}}">
     </a>
   </div>
+  <br><br>
+  {% endfor %}
+
   {% include footer.html %}
 </body>
 </html>
