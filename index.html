@@ -9,7 +9,7 @@
 <body>
   {% include navbar.html %}
 
-  {% for page_i in archive_pages_reverse limit: 2 %}
+  {% for page_i in archive_pages_reverse limit: 3 %}
   <div class="content">
     <a class="nav_title" href="{{ page_i.url | relative_url }}">
       <h2>|- - - {{page_i.title}} - - -|</h2>
